@@ -1,0 +1,46 @@
+ <p> <b>
+ Thanks for placing an order. We'll be contacting you soon for the confirmation and verification of order.</b>
+ </p>
+  {% if user %}
+  <p>Name: {{user['name'] }}</p>
+  <p>Address: {{ address['address_line1'] }}</p>
+  <p>Locality: {{ address['locality'] }}</p>
+      <p>City: {{ address['city'] }}</p>
+
+  <p>Pincode: {{ pincode }}</p>
+  <p>Email: {{ user['email'] }}</p>
+
+  <p>Phone number: {{ user['numbrt'] }}</p>
+
+  {% endif %}
+<table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+  <tr>
+    <th style="padding: 5px; text-align: left; border: 1px solid black; border-collapse: collapse;">Product Name</th>
+    <th style="padding: 5px; text-align: left; border: 1px solid black; border-collapse: collapse;">Quantity</th>
+<th style="padding: 5px; text-align: left; border: 1px solid black; border-collapse: collapse;">Price</th>
+
+  </tr>
+  {% for product in products %}
+  <tr>
+    <td style="border: 1px solid black; border-collapse: collapse;">{{product['product']['name']}}</td>
+    <td style="border: 1px solid black; border-collapse: collapse;">{{product['quatity']}}</td>
+	    <td style="border: 1px solid black; border-collapse: collapse;">{{product['price']}}</td>
+
+  </tr>
+  {% endfor %}
+  <tr>
+      <td colspan="2">Total</td>
+      <td>{{ total }}</td>
+  </tr>
+  
+</table>
+<br>
+<br>
+
+<br>
+<br>
+ <p> <b>
+ In case of any problem, please reply back. </b>
+ </p>
+ 
+	 
