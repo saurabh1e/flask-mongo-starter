@@ -1,23 +1,7 @@
-# FlaskStructure
+# Flask Mongo Starter
 
-Flask Seed App pre configured with Flask-Security, Flask-Restful, Flask-Marshmallow, Flask-Sqlalchemy, Flask-Admin.
+Flask Seed App pre configured with Flask-Security, Flask-MongoRest, Flask_Rate_Limiter, Flask_Admin, cleancat, MongoEngine
 
-Instructions to run:
-
-1. python manager.py db init
-2. python manager.py db migrate
-3. python manager.py db upgrade
-4. python manager.py runserver
-
-Note:
-
-1. Create User, and associate 'admin' role with it to access endpoints
-2. Login Url /test/v1//login
-
-App is configured with flask security token based auth, after logging in you will receive a auth token
-which has to be sent in every request in header with key authentication-token
-
-App is configured to use factory method.
-
-Sample User models, schemas and api is configured.
+#todo
+Add authentication login and user login.
 
